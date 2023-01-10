@@ -1,0 +1,17 @@
+{
+	"_id":
+		{
+			"$oid":"623f7f791a07495704b82bc3"
+		},
+	"name":"Test",
+	"email":
+	"test@gmail.com",
+	"password":"$2b$10$TBOenkeqSDbJ/eIO4c9xDOFGwMmWa4BulyzoAVCg1QnLz7l/u.cG2",
+	"university":"false",
+	"image_file":"images/user.svg",
+	"certificates":[],
+	"__v":
+		{
+			"$numberInt":"0"
+		}
+}

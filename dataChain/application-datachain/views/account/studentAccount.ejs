@@ -1,0 +1,861 @@
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/account-styles.css">
+</head>
+
+<body>
+	<div class="container-fluid body-position">
+		<div class="row">
+			
+			<div class="col-9">
+
+				<div class="container-fluid degreeTitle">
+					<h4>Your Degree.</h4>
+				</div>
+
+				<div class="container-fluid" id="welcome">
+						<div class="container-fluid content-section" style="padding: 100px;">
+							<div class="container">
+								<div class="row" style="">
+									<img class="launchImg2 center" src="../images/Undraw/undraw_outer_space_re_u9vd.svg">
+								</div>
+								<div class="row typewriter center" style="width: max-content;">
+									<h2 style="margin-top: 2vh; font-size: 1vw;">Launching Degree...</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Checks if its a student and they have certificate -->
+				<% if (user && date) { %>
+					<div class="container-fluid pageLoad" id="certificate">
+						<div class="alert alert-success alert-dismissable" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						  	Certificate shared successfully!
+						</div>
+						<div class="alert alert-danger" role="alert">
+						  Unable to share certificate
+						</div>
+						<div class="container-fluid content-section">
+								<fieldset class="form-group">
+									<div class="row row-padding">
+										<img class="certificate-icon" src="../images/certificate.png" alt="">
+										<div class="col border-bottom mb-5">
+											<h1>Awarded Degree</h1>
+										</div>
+										<div class="col border-bottom mb-5">
+											<h2 class="certificate-date"><%= date.slice(0,16) %></h2>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col"></div>
+										<div class="col"><img class="uniCrest" src="../images/manchesterUniCrest.png" alt=""></div>
+										<div class="col"></div>	
+									</div>
+
+									<div class="row">
+										<div class="col"></div>
+										<h1 class="certificate-accreditor"><%= accreditor.name %></h1>
+										<div class="col"></div>
+									</div>
+
+									<div class="row">
+										<div class="col"></div>
+										<div class="col text-align">
+											<div class="form-group">
+												<h2><u>Degree Type:</u></h2>
+												<p><%= degreeType %></p>
+											</div>
+
+											<div class="form-group">
+												<h2><u>Subject: </u></h2>
+												<p><%= subject %></p>
+											</div>
+
+											<div class="form-group">
+												<h2><u>Classification: </u></h2>
+												<p><%= classification %></p>
+											</div>	
+										</div>
+										<div class="col"></div>
+									</div>
+									<div class="row" style="transform: translateY(20px);">
+										<div class="col" style="text-align: left;">
+											<h3><%= accreditor.name %> wallet: <%= accreditorId %><h3>		
+										</div>
+										<div class="col" style="text-align: right;">
+											<h3><%= student.name %> wallet: <%= ownerID %></h3>
+										</div>
+									</div>
+
+								</fieldset>
+						</div>
+
+						<div class="container-fluid certificate-dropDown">
+							<form id="share-certificate-form">
+								<fieldset class="form-group">
+									<div class="row">
+										<div class="col"></div>
+										<div class="col-8">
+											<div class="form-group">
+												<input type="email" name="recipient" id="recipient">
+											</div>
+										</div>
+										<div class="col">
+											<div class="form-group form-button">
+												<input type="submit" name="shareButton" id="shareButton" class="form-submit" value="Share" />
+											</div>
+										</div>
+										<div class="col"></div>
+									</div>
+								</fieldset>
+							</form>
+							<div class="row">
+								<div class="col share-txt">
+									<p class="">⇓</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<!-- If student does not have a degree -->
+				<% } else { %> 
+					<div class="container-fluid pageLoad" id="certificate">
+						<div class="container-fluid content-section">
+							<div class="container">
+								<div class="row" style="">
+									<img class="launchImg center" src="../images/Undraw/undraw_waiting__for_you_ldha.svg">
+								</div>
+								<div class="row noCertificateText center" style="width: max-content;">
+									<h1 style="margin-top: 2vh;">No degree found.</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				<% } %>
+
+
+				<div class="container-fluid yearTitle" style="margin-top: 100px;">
+					<button class="accordion">
+						<div class="row">
+							<div class="col">
+								Year 3.
+							</div>
+							<div class="col markAvg" style="text-align: right;">
+								Avg: <%= y3Avg %>
+							</div>
+						</div>
+					</button>
+					<div class="accordionPanel">
+						<div class="row moduleRow">
+							<% year3Modules.forEach(function(module, i) { %>
+								<div class="col module_cols3" id="<%= i %>col" style="margin-top: 0.75vw; margin-bottom: 0.75vw;">
+									<div class="container moduleTile show_module3" id="<%= i %>">
+										<div class="addDepartmentText text-center">
+											<h2 class=""><%= module.name %></h2>
+											<h3>See Details</h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="moduleDetails text-center " id="<%= i %>moduleDetailsId3" style="margin-left: 100px; margin-right: 100px; margin-bottom: 50px;">
+									<div class="row text-center">
+										<div class="col">
+											<h1 class="moduleText moduleTextH1"><%= module.name %></h1>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col" style="margin-top: 15px; margin-bottom: 0.5vw;">
+											<div class="" style="margin-bottom: 0.5vw;">
+												<h2 class="moduleText moduleTextH2"><%= module.code %></h2>
+											</div>
+
+											<div class="" style="margin-bottom: 0.5vw;">
+												<h2 class="moduleText moduleTextH2">Credits: <%= module.credits %></h2>
+											</div>
+
+											<div class="">
+												<% if (module.final_mark != null) { %>
+													<h2 class="moduleText moduleTextH2">Final Mark: <%= module.final_mark %></h2>
+												<% } else { %>
+													<div class="container">
+														<form method="post" action="/accountRoutes/editFinalMark" onsubmit="setTimeout(function(){window.location.reload();},10);">
+															<fieldset class="form-group">
+																<div class="row justify-content-md-center">
+																	<div class="form-group" >
+																		<input type="" id="moduleID" name="moduleID" style="display: none;" value="<%= module._id %>">
+																		<input type="" name="editFinalMarkInput" id="editFinalMarkInput" class="urlInput" placeholder="Add Final Mark" style="">
+																	</div>
+																	<div class="form-group">
+																		<input type="submit" name="editFinalMarkButton" id="editFinalMarkButton" class="submit-docs" value="Add" style="background-color: #6dabe4; border-top-right-radius: 15px; border-bottom-right-radius: 15px; color: white;" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</div>
+												<% } %>
+											</div>
+										</div>
+										<div class="col" style="margin-top: 15px;">
+											<div class="row justify-content-md-center">
+												<h2 class="moduleText moduleTextH2">Supporting Material:</h2>
+											</div>
+
+											<% if (Array.isArray(module.supporting_docs)) { %>
+												<% module.supporting_docs.forEach(function(supportDoc, i) { %>
+													<% if (i != 0) { %>
+														<div class="row my-auto">
+															<div class="container rectangleMaterial" style="margin-right: 2vw; margin-left: 3vw;">
+																<% if (module.supporting_docs[i].length < 30 ) { %>
+																	<a href="<%= module.supporting_docs[i] %>" target="_blank"><%= module.supporting_docs[i]; %></a>
+																<% } else { %>
+																	<a href="<%= module.supporting_docs[i] %>" target="_blank"><%= module.supporting_docs[i].slice(0, 30); %>...</a>
+																<% } %>
+															</div>
+														</div>
+													<% } %>
+												<% }); %>
+											<% } if (module.supporting_docs.length < 3) { %>
+												<div class="row my-auto">
+													<div class="container" style="margin-right: 2vw; margin-left: 3vw;">
+														<form method="post" action="/accountRoutes/addSupportingDoc" id="add-docsLink" onsubmit="setTimeout(function(){window.location.reload();},10);">
+															<fieldset class="form-group">
+																<div class="row justify-content-md-center">
+																	<div class="form-group" >
+																		<input type="" id="moduleId" name="moduleId" style="display: none;" value="<%= module._id %>">
+																		<input type="url" name="documentLink" id="documentLink" class="urlInput" placeholder="Paste Link" style="">
+																	</div>
+																	<div class="form-group">
+																		<input type="submit" name="addSupportingDocY3" id="addSupportingDocY3" class="submit-docs" value="Add" style="background-color: #6dabe4; border-top-right-radius: 15px; border-bottom-right-radius: 15px; color: white;" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</div>
+												</div>
+											<% } %>
+
+										</div>
+									</div>
+									<div class="row justify-content-md-center module-close">
+										<h2 type="submit" name="closeModule3" id="<%= i %>closeModule3" class="">Close</h2>
+									</div>
+								</div>
+							<% }); %>
+
+						  	<div class="col module_cols3" id="accordionId3" style="margin-top: 0.75vw; margin-bottom: 0.75vw;">
+								<div class="container text-center moduleTile add_department">
+									<div class="addDepartmentText">
+										<img class="addModuleImg" src="../images/Undraw/undraw_add_files_re_v09g.svg">
+										<h2 class="">Add Module</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container text-center">
+						<div id="module_form3" class="moduleForm button_close" style="margin-bottom: 50px;">
+							<form id="add-module-form">
+								<fieldset class="form-group">
+									<legend class="border-bottom mb-4">New Module</legend>
+
+
+									<div class="form-group">
+										<h2 class="departmenth2">Course Name:</h2>
+										<input type="" name="nameY3" id="nameY3" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Course Code:</h2>
+										<input type="" name="codeY3" id="codeY3" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Credits Worth:</h2>
+										<input type="" name="creditsY3" id="creditsY3" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Percentage Achieved:</h2>
+										<input type="" name="finalMarkY3" id="finalMarkY3" class="departmentInput">
+									</div>
+
+									<div class="row justify-content-md-center">
+										<div class="">
+											<input type="submit" name="createModuleY3" id="createModuleY3" class="form-submit" value="Submit" style="margin-right: 2px;" />
+										</div>
+										<div class="">
+											<h2 type="submit" name="cancelButton3" id="cancelButton3" class="form-submit" style="font-size: 15px; margin-left: 2px;" >Cancel</h2>
+										</div>
+									</div>
+
+
+								</fieldset>
+								<div class="form-group">
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid yearTitle">
+					<button class="accordion">
+						<div class="row">
+							<div class="col">
+								Year 2.
+							</div>
+							<div class="col markAvg" style="text-align: right;">
+								Avg: <%= y2Avg %>
+							</div>
+						</div>
+					</button>
+					<div class="accordionPanel">
+						<div class="row moduleRow">
+							<% year2Modules.forEach(function(module, i) { %>
+								<div class="col module_cols2" id="<%= i %>col" style="margin-top: 0.75vw; margin-bottom: 0.75vw;">
+									<div class="container moduleTile show_module2" id="<%= i %>">
+										<div class="addDepartmentText text-center">
+											<h2 class=""><%= module.name %></h2>
+											<h3>See Details</h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="moduleDetails text-center " id="<%= i %>moduleDetailsId2" style="margin-left: 100px; margin-right: 100px; margin-bottom: 50px;">
+									<div class="row">
+										<div class="col">
+											
+										</div>
+										<div class="col">
+											<h1 class="moduleTextH1"><%= module.name %></h1>
+										</div>
+										<div class="col">
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="col" style="margin-top: 15px; margin-bottom: 0.5vw;">
+											<div class="" style="margin-bottom: 0.5vw;">
+												<h2 class="moduleText moduleTextH2"><%= module.code %></h2>
+											</div>
+
+											<div class="" style="margin-bottom: 0.5vw;">
+												<h2 class="moduleText moduleTextH2">Credits: <%= module.credits %></h2>
+											</div>
+
+											<div class="">
+												<% if (module.final_mark != null) { %>
+													<h2 class="moduleText moduleTextH2">Final Mark: <%= module.final_mark %></h2>
+												<% } else { %>
+													<div class="container">
+														<form method="post" action="/accountRoutes/editFinalMark" onsubmit="setTimeout(function(){window.location.reload();},10);">
+															<fieldset class="form-group">
+																<div class="row justify-content-md-center">
+																	<div class="form-group" >
+																		<input type="" id="moduleID" name="moduleID" style="display: none;" value="<%= module._id %>">
+																		<input type="" name="editFinalMarkInput" id="editFinalMarkInput" class="urlInput" placeholder="Add Final Mark" style="">
+																	</div>
+																	<div class="form-group">
+																		<input type="submit" name="editFinalMarkButton" id="editFinalMarkButton" class="submit-docs" value="Add" style="background-color: #6dabe4; border-top-right-radius: 15px; border-bottom-right-radius: 15px; color: white;" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</div>
+												<% } %>
+											</div>
+										</div>
+										<div class="col" style="margin-top: 15px;">
+											<div class="row justify-content-md-center">
+												<h2 class="moduleText moduleTextH2">Supporting Material:</h2>
+											</div>
+
+											<% if (Array.isArray(module.supporting_docs)) { %>
+												<% module.supporting_docs.forEach(function(supportDoc, i) { %>
+													<% if (i != 0) { %>
+														<div class="row my-auto">
+															<div class="container rectangleMaterial" style="margin-right: 2vw; margin-left: 3vw;">
+																<% if (module.supporting_docs[i].length < 50 ) { %>
+																	<a href="<%= module.supporting_docs[i] %>" target="_blank"><%= module.supporting_docs[i]; %></a>
+																<% } else { %>
+																	<a href="<%= module.supporting_docs[i] %>" target="_blank"><%= module.supporting_docs[i].slice(0, 50); %>...</a>
+																<% } %>
+															</div>
+														</div>
+													<% } %>
+												<% }); %>
+											<% } if (module.supporting_docs.length < 3) { %>
+												<div class="row">
+													<div class="container" style="margin-right: 2vw; margin-left: 2vw; margin-top: 5px; margin-bottom: 5px;">
+														<form method="post" action="/accountRoutes/addSupportingDoc" id="add-docsLink" onsubmit="setTimeout(function(){window.location.reload();},10);">
+															<fieldset class="form-group">
+																<div class="row justify-content-md-center">
+																	<div class="form-group" >
+																		<input type="" id="moduleId" name="moduleId" style="display: none;" value="<%= module._id %>">
+																		<input type="url" name="documentLink" id="documentLink" class="urlInput" placeholder="Paste Link" style="">
+																	</div>
+																	<div class="form-group">
+																		<input type="submit" name="addSupportingDocY2" id="addSupportingDocY2" class="submit-docs" value="Add" style="background-color: #6dabe4; border-top-right-radius: 15px; border-bottom-right-radius: 15px; color: white;" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</div>
+												</div>
+											<% } %>
+
+										</div>
+									</div>
+									<div class="row justify-content-md-center module-close">
+										<h2 type="submit" name="closeModule2" id="<%= i %>closeModule2" class="">Close</h2>
+									</div>
+								</div>
+
+							<% }); %>
+						  	<div class="col module_cols2" id="accordionId2" style="margin-top: 0.75vw; margin-bottom: 0.75vw;">
+								<div class="container text-center moduleTile add_department">
+									<div class="addDepartmentText">
+										<img class="addModuleImg" src="../images/Undraw/undraw_add_files_re_v09g.svg">
+										<h2 class="">Add Module</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="container text-center">
+						<div id="module_form2" class="moduleForm button_close" style="margin-bottom: 50px;">
+							<form id="add-department-form">
+								<fieldset class="form-group">
+									<legend class="border-bottom mb-4">New Module</legend>
+
+
+									<div class="form-group">
+										<h2 class="departmenth2">Course Name:</h2>
+										<input type="" name="nameY2" id="nameY2" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Course Code:</h2>
+										<input type="" name="codeY2" id="codeY2" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Credits Worth:</h2>
+										<input type="" name="creditsY2" id="creditsY2" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Percentage Achieved:</h2>
+										<input type="" name="finalMarkY2" id="finalMarkY2" class="departmentInput">
+									</div>
+
+									<div class="row justify-content-md-center">
+										<div class="">
+											<input type="submit" name="createModuleY2" id="createModuleY2" class="form-submit" value="Submit" style="margin-right: 2px;" />
+										</div>
+										<div class="">
+											<h2 type="submit" name="cancelButton2" id="cancelButton2" class="form-submit" style="font-size: 15px; margin-left: 2px;" >Cancel</h2>
+										</div>
+									</div>
+
+
+								</fieldset>
+								<div class="form-group">
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid yearTitle">
+					<button class="accordion">
+						<div class="row">
+							<div class="col">
+								Year 1.
+							</div>
+							<div class="col markAvg" style="text-align: right;">
+								Avg: <%= y1Avg %>
+							</div>
+						</div>
+					</button>
+					<div class="accordionPanel">
+						<div class="row moduleRow">
+							<% year1Modules.forEach(function(module, i) { %>
+								<div class="col module_cols1" id="<%= i %>col" style="margin-top: 0.75vw; margin-bottom: 0.75vw;">
+									<div class="container moduleTile show_module1" id="<%= i %>">
+										<div class="addDepartmentText text-center">
+											<h2 class=""><%= module.name %></h2>
+											<h3>See Details</h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="moduleDetails text-center " id="<%= i %>moduleDetailsId1" style="margin-left: 100px; margin-right: 100px; margin-bottom: 50px;">
+									<div class="row">
+										<div class="col">
+											
+										</div>
+										<div class="col">
+											<h1 class="moduleTextH1"><%= module.name %></h1>
+										</div>
+										<div class="col">
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="col" style="margin-top: 15px; margin-bottom: 0.5vw;">
+											<div class="" style="margin-bottom: 0.5vw;">
+												<h2 class="moduleText moduleTextH2"><%= module.code %></h2>
+											</div>
+
+											<div class="" style="margin-bottom: 0.5vw;">
+												<h2 class="moduleText moduleTextH2">Credits: <%= module.credits %></h2>
+											</div>
+
+											<div class="">
+												<% if (module.final_mark != null) { %>
+													<h2 class="moduleText moduleTextH2">Final Mark: <%= module.final_mark %></h2>
+												<% } else { %>
+													<div class="container">
+														<form method="post" action="/accountRoutes/editFinalMark" onsubmit="setTimeout(function(){window.location.reload();},10);">
+															<fieldset class="form-group">
+																<div class="row justify-content-md-center">
+																	<div class="form-group" >
+																		<input type="" id="moduleID" name="moduleID" style="display: none;" value="<%= module._id %>">
+																		<input type="" name="editFinalMarkInput" id="editFinalMarkInput" class="urlInput" placeholder="Add Final Mark" style="">
+																	</div>
+																	<div class="form-group">
+																		<input type="submit" name="editFinalMarkButton" id="editFinalMarkButton" class="submit-docs" value="Add" style="background-color: #6dabe4; border-top-right-radius: 15px; border-bottom-right-radius: 15px; color: white;" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</div>
+												<% } %>
+											</div>
+										</div>
+										<div class="col" style="margin-top: 15px;">
+											<div class="row justify-content-md-center">
+												<h2 class="moduleText moduleTextH2">Supporting Material:</h2>
+											</div>
+
+											<% if (Array.isArray(module.supporting_docs)) { %>
+												<% module.supporting_docs.forEach(function(supportDoc, i) { %>
+													<% if (i != 0) { %>
+														<div class="row my-auto">
+															<div class="container rectangleMaterial" style="margin-right: 2vw; margin-left: 3vw;">
+																<% if (module.supporting_docs[i].length < 50 ) { %>
+																	<a href="<%= module.supporting_docs[i] %>" target="_blank"><%= module.supporting_docs[i]; %></a>
+																<% } else { %>
+																	<a href="<%= module.supporting_docs[i] %>" target="_blank"><%= module.supporting_docs[i].slice(0, 50); %>...</a>
+																<% } %>
+															</div>
+														</div>
+													<% } %>
+												<% }); %>
+											<% } if (module.supporting_docs.length < 3) { %>
+												<div class="row">
+													<div class="container" style="margin-right: 2vw; margin-left: 2vw; margin-top: 5px; margin-bottom: 5px;">
+														<form method="post" action="/accountRoutes/addSupportingDoc" id="add-docsLink" onsubmit="setTimeout(function(){window.location.reload();},10);">
+															<fieldset class="form-group">
+																<div class="row justify-content-md-center">
+																	<div class="form-group" >
+																		<input type="" id="moduleId" name="moduleId" style="display: none;" value="<%= module._id %>">
+																		<input type="url" name="documentLink" id="documentLink" class="urlInput" placeholder="Paste Link" style="">
+																	</div>
+																	<div class="form-group">
+																		<input type="submit" name="addSupportingDocY3" id="addSupportingDocY3" class="submit-docs" value="Add" style="background-color: #6dabe4; border-top-right-radius: 15px; border-bottom-right-radius: 15px; color: white;" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</div>
+												</div>
+											<% } %>
+
+										</div>
+									</div>
+									<div class="row justify-content-md-center module-close">
+										<h2 type="submit" name="closeModule1" id="<%= i %>closeModule1" class="">Close</h2>
+									</div>
+								</div>
+							<% }); %>
+						  	<div class="col module_cols1" id="accordionId1" style="margin-top: 0.75vw; margin-bottom: 0.75vw;">
+								<div class="container text-center moduleTile add_department">
+									<div class="addDepartmentText">
+										<img class="addModuleImg" src="../images/Undraw/undraw_add_files_re_v09g.svg">
+										<h2 class="">Add Module</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container text-center">
+						<div id="module_form" class="moduleForm button_close" style="margin-bottom: 50px;">
+							<form id="add-department-form3">
+								<fieldset class="form-group">
+									<legend class="border-bottom mb-4">New Module</legend>
+
+
+									<div class="form-group">
+										<h2 class="departmenth2">Course Name:</h2>
+										<input type="" name="nameY1" id="nameY1" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Course Code:</h2>
+										<input type="" name="codeY1" id="codeY1" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Credits Worth:</h2>
+										<input type="" name="creditsY1" id="creditsY1" class="departmentInput">
+									</div>
+
+									<div class="form-group">
+										<h2 class="departmenth2">Percentage Achieved:</h2>
+										<input type="" name="finalMarkY1" id="finalMarkY1" class="departmentInput">
+									</div>
+
+									<div class="row justify-content-md-center">
+										<div class="">
+											<input type="submit" name="createModuleY1" id="createModuleY1" class="form-submit" value="Submit" style="margin-right: 2px;" />
+										</div>
+										<div class="">
+											<h2 type="submit" name="cancelButton" id="cancelButton" class="form-submit" style="font-size: 15px; margin-left: 2px;" >Cancel</h2>
+										</div>
+									</div>
+
+
+								</fieldset>
+								<div class="form-group">
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="col-3">
+				<div class="container profileCol">
+					<h4>Profile.</h4>
+				</div>
+				<div class="container profile text-align">
+					<img class="profilePic" style="color: white;" src="../images/userWhite.svg" alt="">
+					<h2 style="padding-top: 15px; color: white;"><%= studentName %></h2>
+					<h3 style="padding-top: 10px; color: white;"><%= studentEmail %></h3>
+					<h3 style="padding-top: 10px; color: white">Wallet ID:</h3>
+					<h3 id="walletId" style="color: white"><%= walletId %></h3>
+					<% if (userUniversityName == null) { %>
+						<h3 style="padding-top: 10px; color: white;">University:</h3>
+						<h3 style="color: white;"><a href="/accountRoutes/enrollUniversity">(ENROLL)</a></h3>
+					<% } else { %>
+						<h3 style="padding-top: 10px; color: white;">University:</h3>
+						<h3 style="color: white;"><%= userUniversityName %></h3>
+					<% } %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="page-footer font-small blue" style="margin-top: 500px;">
+
+	  <div class="footer-copyright text-center py-3">
+	    <!-- <a href=""> Data-chain.org</a> -->
+	  </div>
+
+	</footer>
+
+
+
+	<script src="/javascript/studentAccount.js"></script>
+	<script src="/javascript/select2.js"></script>
+
+	<script>
+
+		const form = document.querySelector('form');
+		const shareButton = document.getElementById('shareButton');
+		const createModuleY3 = document.getElementById('createModuleY3');
+		const createModuleY2 = document.getElementById('createModuleY2');
+		const createModuleY1 = document.getElementById('createModuleY1');
+
+
+
+		if (shareButton) { 
+			shareButton.addEventListener('click', async (event) => {
+			    event.preventDefault();
+
+			    const recipientEmail = document.getElementById('recipient').value;
+
+			    try {
+			      const res = await fetch('/accountRoutes/share', { 
+			        method: 'POST', 
+			        body: JSON.stringify({ recipientEmail }),
+			        headers: {'Content-Type': 'application/json'}
+			      });
+
+			      const data = await res.json();
+
+			      if (data.viewer) {
+			        $('.alert-success').show()
+			        $('.alert-danger').hide()
+			      }
+
+			      else {
+			        $('.alert-danger').show()
+			        $('.alert-danger').text(data.err);
+			      }
+
+
+
+			    } catch (err) {
+			      console.log(err);
+			      $('.alert-danger').show()
+
+			    }
+			});
+
+		}
+
+
+
+
+		createModuleY3.addEventListener('click', async (event) => {
+		    event.preventDefault();
+
+		    const name = document.getElementById('nameY3').value;
+		    const code = document.getElementById('codeY3').value;
+		    const credits = document.getElementById('creditsY3').value;
+		    const finalMark = document.getElementById('finalMarkY3').value;
+		    const supportingDocs = "";
+		    const yearTaken = 3;
+
+		    try {
+		      const res = await fetch('/accountRoutes/createModule', { 
+		        method: 'POST', 
+		        body: JSON.stringify({ name, code, credits, finalMark, yearTaken, supportingDocs }),
+		        headers: {'Content-Type': 'application/json'}
+		      });
+
+		      const data = await res.json();
+
+		      if (data.module) {
+		      $(".col-3").fadeOut("slow");
+		      $(".col-9").fadeOut("slow", function() {
+		          location.assign('/accountRoutes/account');
+		        });
+		      }
+
+		    } catch (err) {
+		      console.log(err);
+		      $('.alert-danger').show()
+
+		    }
+		});
+
+
+		createModuleY2.addEventListener('click', async (event) => {
+		    event.preventDefault();
+
+		    const name = document.getElementById('nameY2').value;
+		    const code = document.getElementById('codeY2').value;
+		    const credits = document.getElementById('creditsY2').value;
+		    const finalMark = document.getElementById('finalMarkY2').value;
+		    const supportingDocs = "";
+		    const yearTaken = 2;
+
+		    try {
+		      const res = await fetch('/accountRoutes/createModule', { 
+		        method: 'POST', 
+		        body: JSON.stringify({ name, code, credits, finalMark, yearTaken, supportingDocs }),
+		        headers: {'Content-Type': 'application/json'}
+		      });
+
+		      const data = await res.json();
+
+		      if (data.module) {
+		      $(".col-3").fadeOut("slow");
+		      $(".col-9").fadeOut("slow", function() {
+		          location.assign('/accountRoutes/account');
+		        });
+		      }
+
+		    } catch (err) {
+		      console.log(err);
+		      $('.alert-danger').show()
+
+		    }
+		});
+
+
+		createModuleY1.addEventListener('click', async (event) => {
+		    event.preventDefault();
+
+		    const name = document.getElementById('nameY1').value;
+		    const code = document.getElementById('codeY1').value;
+		    const credits = document.getElementById('creditsY1').value;
+		    const finalMark = document.getElementById('finalMarkY1').value;
+		    const supportingDocs = "";
+		    const yearTaken = 1;
+
+		    try {
+		      const res = await fetch('/accountRoutes/createModule', { 
+		        method: 'POST', 
+		        body: JSON.stringify({ name, code, credits, finalMark, yearTaken, supportingDocs }),
+		        headers: {'Content-Type': 'application/json'}
+		      });
+
+		      const data = await res.json();
+
+		      if (data.module) {
+		      $(".col-3").fadeOut("slow");
+		      $(".col-9").fadeOut("slow", function() {
+		          location.assign('/accountRoutes/account');
+		        });
+		      }
+
+		    } catch (err) {
+		      console.log(err);
+		      $('.alert-danger').show()
+
+		    }
+		});
+	
+	</script>
+
+
+	<script type="text/javascript">
+		
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight) {
+		      panel.style.maxHeight = null;
+		    } else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		    }
+		  });
+		}
+
+	</script>
+
+
+
+
+</body>

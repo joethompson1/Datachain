@@ -1,0 +1,76 @@
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/enroll-styles.css">
+</head>
+
+<body>
+
+	<div class="container-fluid body-position">
+		<div class="row"> 
+			<div class="col-9">
+
+				<div class="container-fluid degreeTitle">
+					<h4 style="margin-bottom: 20px;">Enroll.</h4>
+
+
+					<div class="container">
+						<% if (university != null) { %>
+							<div class="alert alert-success alert-dismissable" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							  	Enrolled successfully!
+							</div>
+						<% } %>
+						<div class="row">
+							<div class="col">
+								<div class="enroll">					
+									<select class="js-example-basic-single" name="university" form="enroll_form">
+
+										<% for(var i = 0; i < accreditors.length; i++) { %>
+											<option value="<%= accreditors[i]._id %>"><%= accreditors[i].name %></option>
+										<% } %>
+									</select>
+								</div>
+							</div>
+							<div class="col-2">
+								<form method="post" action="/accountRoutes/enrollUniversity" id="enroll_form" onsubmit="setTimeout(function(){window.location.reload();},10);">
+									<fieldset class="form-group">
+										<div class="row justify-content-md-center">
+											<div class="form-group">
+												<input type="" name="ownerID" id="ownerID" style="display: none;" value="<%= ownerID %>">
+												<input type="submit" name="enrollButton" id="enrollButton" class="form-submit" value="Add" />
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-3">
+				<div class="container profileCol">
+					<h4>Profile.</h4>
+				</div>
+				<div class="container profile text-align">
+					<img class="profilePic" style="color: white;" src="../images/userWhite.svg" alt="">
+					<h2 style="padding-top: 15px; color: white;"><%= studentName %></h2>
+					<h3 style="padding-top: 10px; color: white;"><%= studentEmail %></h3>
+					<h3 style="padding-top: 10px; color: white">Wallet ID:</h3>
+					<h3 id="walletId" style="color: white"><%= ownerID %></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="/javascript/select2.js"></script>
+
+</body>

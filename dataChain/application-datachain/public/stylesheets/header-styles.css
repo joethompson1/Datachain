@@ -1,0 +1,125 @@
+@font-face { 
+  font-family: Spartan;  
+  src: 
+      url('../fonts/Spartan/Spartan-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+body, html{
+  height:100%;
+  width: 100%;
+  margin:0;
+  font-size:10px;
+  font-family:Spartan;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+  background-color: bg-off_white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 200px;
+  background-size: 500px 500px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+.bg-off_white {
+       background-color: white;
+}
+
+
+
+.section{
+  text-align:center;
+  padding:50px 200px;
+}
+
+.section-light{
+  background-color:#fafafa;
+  color:#666;
+}
+
+.section-dark{
+  background-color:#282e34;
+  color:#ddd;
+}
+
+.ptext{
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+  font-size:20px;
+  background-color: black;
+  padding: 50px;
+  line-height: 150%;
+  color: white;
+  font-family: Spartan;
+}
+
+
+.container-fluid {
+  max-width: 1500px;
+}
+
+
+.site-header .navbar-nav .nav-link {
+  color: black;
+  font-family: Spartan;
+  font-size: 15px;
+  margin-top: 0.4rem;
+  border-bottom: solid transparent;
+}
+
+.nav-hover{
+  color: black;
+  border-bottom: none;
+  position: relative;
+}
+
+
+.nav-hover:after{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  left: 50%;
+  bottom:0;
+  background-color: black;
+  transition: all ease-in-out .2s;
+}
+
+.nav-hover:hover::after{
+  width: 100%;
+  left: 0;
+}
+
+
+.nav-logo-position {
+  padding-top: 10px;
+}
+
+.nav-text-position {
+  margin-right: 50px;
+}
+
+.container-layout {
+  position: relative;
+  margin-top: 50px;
+}
+
+.child {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -500px;
+}
+
+
+

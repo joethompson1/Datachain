@@ -1,0 +1,211 @@
+
+.body-position {
+  margin-top:  125px;
+}
+
+
+.container-fluid {
+  max-width: 2000px;
+  padding-left: 100px;
+  padding-right: 50px;
+}
+
+
+.degreeTitle h4 {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+
+.form-submit {
+  display: inline-block;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: 8vw;
+  height: 4vw;
+  font-size: 1vw;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  cursor: pointer; 
+  text-align: center;
+}
+
+.alert{
+    font-size: 1vw;
+    text-align:center;
+}
+
+
+.profile {
+  position: fixed;
+  width: 20vw;
+  background-color: #3f3d56;
+  border-radius: 25px;
+  border-style: groove;
+  padding: 1vw;
+  margin-top: 4.2vw;
+}
+
+.profilePic {
+  width: 5vw;
+  height:  5vw;
+}
+
+.profile h2 {
+  font-size: 1.5vw;
+}
+
+.profile h3 {
+  font-size: 0.9vw;
+}
+
+
+.profileCol {
+  position: fixed;
+  transform: translateX(-15px);
+  width: 22vw;
+}
+
+.profileCol h4 {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align: left;
+}
+
+
+
+.text-align {
+  text-align: center;
+}
+
+
+
+.select2 {
+	width: 100% !important;
+	font-size: 1.3vw !important;
+}
+
+.select2-results__option {
+	font-size: 1.1vw;
+	line-height: 4vw !important;
+}
+
+.select2-selection__rendered {
+    line-height: 4vw !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 4vw !important;
+}
+
+.select2-selection__arrow {
+    height: 4vw !important;
+}
+
+.select2-search__field {
+	height: 3vw !important;
+	font-size: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 2000px) {
+
+  .alert {
+    font-size: 18px;
+  }
+
+  .degreeTitle h4 {
+    font-size: 40px;
+  }
+
+  .profileCol h4 {
+    font-size: 40px;
+  }
+
+  .profile {
+    width: 300px;
+    margin-top: 65px;
+  }
+
+  .profileCol {
+    width: 350px;
+  }
+
+  .profilePic {
+    width: 100px;
+    height:  100px;
+  }
+
+  .profile h2 {
+    font-size: 18px;
+  }
+
+  .profile h3 {
+    font-size: 12px;
+  }
+
+  .form-submit {
+	  width: 130px;
+	  height: 65px;
+	  font-size: 15px;
+	  border-radius: 5px;
+	  -moz-border-radius: 5px;
+	  -webkit-border-radius: 5px;
+	  -o-border-radius: 5px;
+	  -ms-border-radius: 5px;
+	}
+
+
+  .select2 {
+		font-size: 20px !important;
+	}
+
+	.select2-results__option {
+		font-size: 15px !important;
+		line-height: 65px !important;
+	}
+
+	.select2-selection__rendered {
+	    line-height: 65px !important;
+	}
+
+	.select2-container .select2-selection--single {
+	    height: 65px !important;
+	}
+
+	.select2-selection__arrow {
+	    height: 65px !important;
+	}
+
+	.select2-search__field {
+		height: 60px !important;
+		font-size: 18px;
+	}
+
+}
+
+

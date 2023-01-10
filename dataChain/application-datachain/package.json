@@ -1,0 +1,42 @@
+{
+  "name": "DataChainNodeJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "nyc mocha --recursive --exit --timeout 10000"
+  },
+  "keywords": [],
+  "author": "Hyperledger",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "fabric-ca-client": "^2.2.4",
+    "fabric-network": "^2.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.2",
+    "node-fetch": "^3.2.3",
+    "validator": "^13.7.0",
+    "select2": "^4.1.0-rc.0"
+  },
+  "devDependencies": {
+    "ava": "^4.1.0",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "dotenv": "^10.0.0",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.14",
+    "nyc": "^15.1.0",
+    "openpgp": "^5.1.0",
+    "request": "^2.88.2",
+    "select2": "^4.1.0-rc.0",
+    "sinon": "^13.0.1",
+    "supertest": "^6.2.2"
+  },
+  "engineStrict": true
+}

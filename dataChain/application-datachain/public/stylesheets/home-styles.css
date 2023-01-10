@@ -1,0 +1,471 @@
+@font-face { 
+  font-family: Spartan;  
+  src: 
+      url('../fonts/Spartan/Spartan-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+body, html{
+  height:100%;
+  width: 100%;
+  margin:0;
+  font-size: 10px;
+  font-family:Spartan;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+  background-color: bg-off_white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 200px;
+  background-size: 500px 500px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+.alert{
+    display: none;
+    font-size: 1vw;
+    text-align:center;
+}
+
+.bg-off_white {
+  background-color: white;
+}
+
+.panel {
+  width: 27vw; height: 27vw;
+  margin:1vw 0;
+  border-radius: 50px;
+  padding-top: 1vw;
+  padding-left: 2vw;
+}
+
+
+.skew {
+  transform: translateX(-2vw);
+}
+
+.skewRight {
+  transform: translateX(2vw);
+}
+
+
+.container-fluid {
+  max-width: 2000px;
+  padding-right: 130px;
+  padding-left: 130px;
+}
+
+
+.body-position {
+  margin-top:  125px;
+}
+
+
+.row-padding {
+  padding-left:  10px;
+  padding-right: 10px;
+}
+
+.certificate-date {
+  text-align: right;
+  padding-top: 20px;
+}
+
+.certificate-icon {
+  width: 6vw;
+  height:  6vw;
+}
+
+.uniCrest {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  width:  12vw;
+  height:  12vw;
+}
+
+
+.welcomeImg {
+  width: 25vw;
+  height:  25vw;
+}
+
+
+.realityImg {
+  padding: 5px;
+  width: 22vw; height: 22vw;
+  margin:1vw 0;
+}
+
+.realityText {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 30px;
+
+}
+
+.realityText h1 {
+  font-weight: bold;
+  font-size: 2.0vw;
+}
+
+.realityText h2 {
+  margin-top: 5vw; 
+  font-size: 1.7vw;
+}
+
+
+.connectionImg {
+  padding:  5px;
+  width: 22vw; height: 22vw;
+  margin:1vw 1vw;
+}
+
+.welcomeImgPadding {
+  padding-top: 15vw;
+}
+
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.certificate-accreditor {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.4vw;
+}
+
+.degreeTitle {
+  font-size: 1.2vw;
+}
+
+.text-align {
+  text-align: center;
+}
+
+
+
+
+
+.content-section h1 {
+  padding-top: 15px;
+}
+
+
+
+.content-section h2 {
+  padding-top: 1.3vw;
+  font-size: 1.0vw;
+  color: #666;;
+}
+
+.content-section p {
+  font-size: 1.2vw;
+  color:  black;
+  line-height: 1.8;
+}
+
+.share-txt {
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+
+.share-txt p {
+  font-size: 1.2vw;
+  color:  black;
+  margin: 0;
+  padding-bottom: 0.2vw;
+}
+
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+
+.userStats {
+  text-align: center;
+  margin-top: 10vh;
+  border-radius: 25px;
+  padding: 25px;
+  border-style: groove;
+}
+
+.userStats h1 {
+  font-size: 1.8vw;
+}
+
+.userStats h2 {
+  font-size: 1.2vw;
+}
+
+
+
+.certificate-dropDown {
+  background: lightgrey;
+  padding: 0px 0px;
+  border: 1px solid #dddddd;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 2.7vw;
+  text-align: center;
+  -webkit-transition: height 500ms ease-in-out;
+     -moz-transition: height 500ms ease-in-out;
+      -ms-transition: height 500ms ease-in-out;
+       -o-transition: height 500ms ease-in-out;
+          transition: height 500ms ease-in-out;
+}
+
+.certificate-dropDown input{
+  border-radius: 20px;
+  margin-top: 1.2vw;
+  display: none;
+  opacity: 0;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #ff6584; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  font-size: 2vw;
+  text-align: center;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  25% { border-color: #ff6584; }
+}
+
+
+
+.certificate-dropDown:hover {
+  height: 10em;
+  display: block;
+}
+
+.certificate-dropDown:hover input {
+  display: block;
+  opacity:  1;
+}
+
+
+@media screen and (min-width:  2000px) {
+  .realityImg {
+    width:  580px;
+    height:  580px;
+    padding: 5px;
+    margin:1vw 0;
+  }
+
+  .panel {
+    width:  700px;
+    height:  700px;
+    margin: 30px 0;
+    border-radius: 50px;
+    padding-top: 1px;
+    padding-left: 35px;
+  }
+
+  .realityText h1 {
+    font-weight: bold;
+    font-size: 45px;
+  }
+
+  .realityText h2 {
+    margin-top: 50px; 
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .connectionImg {
+    width:  580px;
+    height:  580px;
+    padding: 5px;
+    margin:1.5vw 1.1vw;
+  }
+}
+
+
+
+@media screen and (min-width: 2000px) {
+  .degreeTitle {
+    font-size: 25px;
+  }
+
+  .certificate-accreditor {
+    font-size: 35px;
+  }
+
+
+  .content-section h2 {
+    font-size:  15px;
+    padding-top: 20px;
+  }
+
+  .content-section p {
+    font-size: 22px;
+  }
+
+  .certificate-icon {
+    width: 80px;
+    height:  80px;
+  }
+
+  .uniCrest {
+    width: 250px;
+    height:  250px;
+  }
+
+  .certificate-dropDown {
+    height: 30px;
+  }
+
+  .certificate-dropDown input {
+    margin-top: 12px;
+  }
+
+  .share-txt p {
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+
+  .alert {
+    font-size: 18px;
+  }
+
+  .welcomeImg {
+    width: 600px;
+    height:  600px;
+  }
+
+  .userStats h1 {
+    font-size: 35px;
+  }
+
+  .userStats h2 {
+    font-size: 25px;
+  }
+}
+
+
+@media screen and (min-height:  780px) {
+  .welcomeImgPadding {
+    padding-top: 25px;
+  }
+}
+
+@media screen and (min-height:  1500px) {
+  .welcomeImgPadding {
+    padding-top: 250px;
+  }
+}
+
+
+.form-submit {
+  display: inline-block;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 15px 39px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer; 
+}
+
+
+
+
+
+input {
+  outline: none;
+  width: 100%; 
+  padding: 12px 20px;
+  border: none;
+  border-bottom: 2px solid grey;
+  font-size: 15px;
+}
+
+input:focus {
+  border-bottom: 3px solid black;
+  background-color: #F8F8F8;
+}
+
+
+
+
+
+
+
+
+
+

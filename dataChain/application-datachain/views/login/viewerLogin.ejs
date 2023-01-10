@@ -1,0 +1,109 @@
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Font Icon -->
+    <link rel="stylesheet" href="/fonts/RegisterPage/material-icon/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="/stylesheets/login-style.css">
+</head>
+
+<body>
+	<div class="login-reg-panel" style="background-color: #788fd4;">
+		<div class="login-info-box">
+			<h2 class="info-box-text">Have an account?</h2>
+
+			<div class="col">
+				<img src="/images/login.svg" width="600" height="280" class="login-img" alt="">
+			</div>
+
+			<div class="login-btn">
+				<label id="label-register" for="log-reg-show" class="login-button-text" style="background-color: #48577d;">Login</label>
+				<input type="radio" name="active-log-panel" id="log-reg-show" checked>
+			</div>
+		</div>
+							
+		<div class="register-info-box">
+			<h2 class="info-box-text">Don't have an account?</h2>
+
+			<div class="col">
+				<img src="/images/signup.svg" width="300" height="140" class="signup-img" alt="">
+			</div>
+
+			<div class="signup-btn">
+				<label id="label-login" for="log-login-show" class="info-box-text" style="background-color: #48577d;">Register</label>
+				<input type="radio" name="active-log-panel" id="log-login-show">
+			</div>
+		</div>
+							
+		<div class="white-panel">
+			<div class="row">
+				<div class="col" style="padding-right: 0px;">
+					<a class="nav-item nav-link nav-bar-text nav-hover" style="transform: translateY(-5px);" href="/authRoutes/signup">Student</a>
+				</div>
+				<div class="col" style="padding-right: 0px; padding-left: 0px;">
+					<a class="nav-item nav-link nav-bar-text nav-hover" style="transform: translateY(-5px);" href="/authRoutes/universityLogin">University</a>
+				</div>
+				<div class="col" style="padding-left: 0px;">
+					<a class="nav-item nav-link nav-bar-text nav-hover" style="background-color: #7590CF; border-radius: 8px 8px 0px 0px; color: white; transform: translateY(-5px);" href="/authRoutes/viewerLogin">Viewer</a>
+				</div>
+			</div>
+			<div class="login-show">
+				<h2>Viewer Login</h2>
+				<form class="register-form" id="login-form">
+					<div class="form-group">
+	                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+	                    <input type="email" name="email" id="email" placeholder="Email"/>
+	                </div>
+					<div class="form-group">
+	                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+	                    <input type="password" name="loginPass" id="loginPass" placeholder="Password"/>
+	                </div>
+					<div class="form-group form-button">
+                            <input type="submit" name="login" id="login" class="form-submit" value="Login"/>
+                        </div>
+					<a href="">Forgot password?</a>
+				</form>
+			</div>
+
+			<div class="register-show">
+				<h2>Register</h2>
+				<form class="register-form" id="register-form" action="signup">
+                    <div class="form-group">
+                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text" name="name" id="name" placeholder="Name" required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="zmdi zmdi-email"></i></label>
+                        <input type="email" name="signupEmail" id="signupEmail" placeholder="Email" required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="password" name="pass" id="pass" placeholder="Password" required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                        <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                    </div>
+
+                    <div class="form-group form-button">
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                    </div>
+                </form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="/javascript/loginSlider.js"></script>
+	<script src="/javascript/viewerLogin.js"></script>
+
+</body>

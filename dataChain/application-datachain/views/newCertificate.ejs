@@ -1,0 +1,106 @@
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/newCertificate-styles.css">
+</head>
+
+<body>
+	<div class="container content-section">
+		<form method="POST" action="">
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">New Certificate</legend>
+
+
+				<div class="form-group">
+					<h2>Degree Title:</h2>
+					<input type="" name="title" id="title">
+				</div>
+
+				<div class="form-group">
+					<h2>Degree Type:</h2>
+					<div class="dropdown">
+					  	<select class="js-example-basic-single" name="type" id="type">
+							<option value="Bachelor of Arts (BA)">Bachelor of Arts (BA)</option>
+							<option value="Bachelor of Science (BSc)">Bachelor of Science (BSc)</option>
+							<option value="Bachelor of Education (BEd)">Bachelor of Education (BEd)</option>
+							<option value="Bachelor of Laws (LLB)">Bachelor of Laws (LLB)</option>
+							<option value="Bachelor of Medicine, Bachelor of Surgery (MB ChB)">Bachelor of Medicine, Bachelor of Surgery (MB ChB)</option>
+							<option value="Master of Arts (MA)">Master of Arts (MA)</option>
+							<option value="Master of Science (MSc)">Master of Science (MSc)</option>
+							<option value="Master of Engineering (MEng)">Master of Engineering (MEng)</option>
+							<option value="Master of Education (MEd)">Master of Education (MEd)</option>
+							<option value="Master of Research (MRes)">Master of Research (MRes)</option>
+							<option value="Master of Philosophy (MPhil)">Master of Philosophy (MPhil)</option>
+							<option value="Master of Business Administration (MBA)">Master of Business Administration (MBA)</option>
+							<option value="Master's Degree in Law (LLM)">Master's Degree in Law (LLM)</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<h2>Department:</h2>
+					<div class="dropdown">
+					  	<select class="js-example-basic-single" name="departments" id="departments">
+					  		<% departments.forEach(function(department, i) { %>
+								<option value="<%= department %>"><%= department %></option>
+					  		<% }); %>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<h2>Recipient:</h2>
+					<div class="dropdown">
+						<select class="js-example-basic-multiple" name="recipients[]" id="recipients" multiple="multiple">
+							<% for(var i = 0; i < students.length; i++) { %>
+								<option value="<%= students[i]._id %>"><%= students[i].name %></option>
+							<% } %>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<h2>Class of Degree:</h2>
+					<div class="dropdown">
+					  	<select class="js-example-basic-single" name="grade" id="grade">
+							<option value="First Class">First Class</option>
+							<option value="Upper Second Class">Upper Second Class</option>
+							<option value="Lower Second Class">Lower Second Class</option>
+							<option value="Third Class">Third Class</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group form-button">
+					<input type="submit" name="submit" id="loginButton" class="form-submit" value="Submit"/>
+				</div>
+
+			</fieldset>
+			<div class="form-group">
+			</div>
+
+		</form>
+	</div>
+
+	<!-- Footer -->
+	<footer class="page-footer font-small blue" style="margin-top: 500px;">
+
+	  <div class="footer-copyright text-center py-3">© 2022 Copyright:
+	    <a href=""> Data-chain.org</a>
+	  </div>
+
+	</footer>
+
+
+
+
+	<script src="/javascript/select2.js"></script>
+	<script src="/javascript/newCertificate.js"></script>
+
+
+	
+</body>
+

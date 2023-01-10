@@ -1,0 +1,946 @@
+@font-face { 
+  font-family: Spartan;  
+  src: 
+      url('../fonts/Spartan/Spartan-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+body, html{
+  height:100%;
+  width: 100%;
+  margin:0;
+  font-size: 10px;
+  font-family:Spartan;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+  background-color: bg-off_white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 200px;
+  background-size: 500px 500px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+.alert{
+    display: none;
+    font-size: 1vw;
+    text-align:center;
+}
+
+.bg-off_white {
+  background-color: white;
+}
+
+
+
+
+.container-fluid {
+  max-width: 2000px;
+  padding-left: 100px;
+  padding-right: 50px;
+}
+
+
+
+.body-position {
+  margin-top:  125px;
+}
+
+
+.row-padding {
+  padding-left:  10px;
+  padding-right: 10px;
+}
+
+.certificate-date {
+  text-align: right;
+  padding-top: 20px;
+}
+
+.certificate-icon {
+  width: 6vw;
+  height:  6vw;
+}
+
+.uniCrest {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  width:  12vw;
+  height:  12vw;
+}
+
+.noCertificate {
+  width:  50vw;
+  height:  50vw;
+}
+
+
+.launchImg {
+  width: 25vw;
+  height:  25vw;
+}
+
+
+.launchImg2 {
+    width: 15vw;
+    height: 15vw;
+  }
+
+
+.launchImgPadding {
+  padding-top: 15vw;
+}
+
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.certificate-accreditor {
+  text-align: center;
+  padding: 20px;
+}
+
+.text-align {
+  text-align: center;
+}
+
+
+
+.moduleForm{
+    display: none;
+    margin: auto;
+    width: 100%;
+    border-radius: 25px;
+    border-width: 6px;
+    border-style: groove;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    background-color: #FAF9F6;
+}
+
+
+.moduleDetails{
+    position: relative;
+    display: none;
+    margin: auto;
+    width: 100%;
+    margin-left: 2vw; 
+    margin-right: 2vw; 
+    border-radius: 25px;
+    border-style: groove;
+    margin-top: 50px;
+    border-radius: 25px;
+    border-style: groove;
+    max-height: 285px;
+    background-color: white;
+}
+
+
+.module_cols1 {
+  max-width: 390px;
+}
+
+.module_cols2 {
+  max-width: 390px;
+}
+
+.module_cols3 {
+  max-width: 390px;
+}
+
+
+.rectangleMaterial {
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: groove;
+  margin-bottom: 10px;
+}
+
+.rectangleMaterial:hover {
+  background-color: #3f3d56;
+}
+
+.rectangleMaterial a {
+  color: black;
+  font-size: 0.75vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.rectangleMaterial:hover a {
+  color: white;
+}
+
+
+
+
+
+.accordion {
+  background-color: transparent;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #3f3d56;
+  color: white;
+}
+
+.moduleRow { 
+  padding-top: 6px;
+  margin-bottom: 30px;
+}
+
+.accordionPanel {
+  padding-left: 1vw;
+  padding-right:  1vw;
+  background-color: #FAF9F6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.moduleMark:hover {
+  
+}
+
+
+.moduleTextH1 {
+  padding-top: 0.25vw;
+  font-size: 1.25vw;
+}
+
+.moduleTextH2 {
+  padding-top: 0.75vw;
+  font-size: 0.9vw;
+}
+
+
+.urlInput {
+  text-align: center; 
+  border-top-left-radius: 15px; 
+  border-bottom-left-radius: 15px; 
+  background-color: lightgrey;
+  width: 10vw;
+  max-width: 200px;
+}
+
+button:focus, input[type="button"]:focus {
+    outline: none;
+}
+
+
+
+
+.content-section h1 {
+  padding-top: 15px;
+  font-size: 1.4vw;
+}
+
+
+
+.content-section h2 {
+  padding-top: 1.3vw;
+  font-size: 1.0vw;
+  color: #666;;
+}
+
+.content-section p {
+  font-size: 1.2vw;
+  color:  black;
+  line-height: 1.8;
+}
+
+.content-section h3 {
+  font-size: 0.7vw;
+}
+
+.share-txt {
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+
+.pageLoad {
+  display: none;
+}
+
+
+.share-txt p {
+  font-size: 1.2vw;
+  color:  black;
+  margin: 0;
+  padding-bottom: 0.2vw;
+}
+
+
+.content-section {
+  background-color: #FAF9F6;
+  padding: 10px 20px;
+  border-style: groove;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+
+
+.certificate-dropDown {
+  background: lightgrey;
+  padding: 0px 0px;
+  border: 1px solid #dddddd;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 2.7vw;
+  text-align: center;
+  -webkit-transition: height 500ms ease-in-out;
+     -moz-transition: height 500ms ease-in-out;
+      -ms-transition: height 500ms ease-in-out;
+       -o-transition: height 500ms ease-in-out;
+          transition: height 500ms ease-in-out;
+}
+
+.certificate-dropDown input{
+  border-radius: 20px;
+  margin-top: 1.2vw;
+  display: none;
+  opacity: 0;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+.certificate-dropDown:hover {
+  height: 10em;
+  display: block;
+}
+
+.certificate-dropDown:hover input {
+  display: block;
+  opacity:  1;
+}
+
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #ff6584; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  font-size: 2vw;
+  text-align: center;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #ff6584; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  font-size: 1vw;
+  text-align: center;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  25% { border-color: #ff6584; }
+}
+
+
+.noCertificateText h1 {
+  font-size: 2vw;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+
+.form-submit {
+  display: inline-block;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 15px 39px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  cursor: pointer; 
+}
+
+
+
+.module-close {
+  display: inline-block;
+  bottom: 0;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 2px 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer; 
+}
+
+
+.module-close h2 {
+  font-size: 0.7vw;
+  padding-top: 0.1vw;
+}
+
+
+.noSharedDegree {
+  display: none;
+}
+
+.moduleTextPosition!important {
+  margin-top: 2vw;
+}
+
+
+.degreeTitle h4 {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.yearTitle button {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align: left;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.markAvg {
+  font-size: 1vw;
+}
+
+
+.profile {
+  position: fixed;
+  width: 20vw;
+  background-color: #3f3d56;
+  border-radius: 25px;
+  border-style: groove;
+  padding: 1vw;
+  margin-top: 4.2vw;
+}
+
+.profilePic {
+  width: 5vw;
+  height:  5vw;
+}
+
+.profile h2 {
+  font-size: 1.5vw;
+}
+
+.profile h3 {
+  font-size: 0.9vw;
+}
+
+
+
+
+
+input {
+  outline: none;
+  width: 100%; 
+  padding: 12px 20px;
+  border: none;
+  border-bottom: 2px solid grey;
+  font-size: 15px;
+}
+
+input:focus {
+  border-bottom: 3px solid black;
+  background-color: #F8F8F8;
+}
+
+
+
+
+/* ACCREDITOR ACCOUNT STYLES */
+
+
+.departmentRow { 
+  padding-top: 6px;
+  margin-bottom: 30px;
+}
+
+
+.departmentCol {
+  padding-bottom: 1.2vw; 
+  padding-right: 1.2vw; 
+}
+
+
+
+.departmentTile {
+  height: 15vw; width: 15vw;
+  border-radius: 25px;
+  border-style: groove;
+  max-width: 300px;
+  max-height: 300px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  transition: all 0.3s ease-in-out 0.05s;
+}
+
+.departmentTile:hover {
+  background-color: #3f3d56;
+}
+
+
+.moduleTile {
+  height: 15vw; width: 15vw;
+  border-radius: 25px;
+  border-style: groove;
+  max-width: 300px;
+  max-height: 300px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background-color: white;
+  transition: all 0.3s ease-in-out 0.05s;
+}
+
+.moduleTile:hover {
+  background-color: #7590cf;
+}
+
+
+
+.departmentTile:hover h2 {
+  color: white;
+  transition: all 0.3s ease-in-out 0.05s;
+}
+
+.moduleTile:hover h2 {
+  color: white;
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out 0.05s;
+}
+
+.moduleTile h2 {
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out 0.05s;
+}
+
+
+.departmentTile:hover h3 {
+  display: block;
+}
+
+
+.departmentTitle h4 {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align: left;
+}
+
+.sharedDegreeTitle h4 {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align: left;
+}
+
+.profileCol {
+  position: fixed;
+  transform: translateX(-15px);
+  width: 22vw;
+}
+
+.profileCol h4 {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align: left;
+}
+
+.departmentTitle2 h4 {
+  font-size: 2.5vw; 
+  border-bottom: 5px solid grey;
+  text-align:  left;
+}
+
+
+.addDepartmentImg {
+    position: absolute;
+    left: 1.5vw;
+    right: 0;
+    bottom: 0;
+    max-width: 15vw;
+    max-height: 15vw;
+}
+
+.addModuleImg {
+    position: absolute;
+    transform: translateX(-1.8vw);
+    height: 500%;
+}
+
+
+.addDepartmentText {
+  align-items: center;
+  transform: translateY(-50%);
+  margin-top: 7vw;
+}
+
+.addDepartmentText h2 {
+  font-size: 1.5vw;
+}
+
+.addDepartmentText h3 {
+  display: none;
+  color: white;
+}
+
+.enterPass {
+  display:  none;
+  padding-top: 30%;
+}
+
+
+#department_form{
+    display: none;
+    margin: auto;
+    width: 60vw;
+    border-radius: 25px;
+    border-style: groove;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    background-color: #FAF9F6;
+}
+
+
+
+.departmenth2 {
+  padding-top: 1.5vw;
+}
+
+.departmentInput {
+  width: 80%;
+  text-align: center;
+  background-color: #FAF9F6;
+}
+
+
+.tableHeader {
+  font-size: 1.2vw;
+}
+
+.tableContent {
+  font-size: 1vw;
+}
+
+
+
+.accreditorProfile {
+  position: fixed;
+  width: 20vw;
+  background-color: #3f3d56;
+  border-radius: 25px;
+  transform: translateX(-30px);
+  border-style: groove;
+  padding: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SCREEN WIDTH ADJUSTMENTS */
+
+
+@media screen and (min-width: 2000px) {
+  .content-section h1 {
+     font-size: 25px;
+  }
+
+  .content-section h2 {
+    font-size:  15px;
+    padding-top: 20px;
+  }
+
+  .content-section p {
+    font-size: 22px;
+  }
+
+  .certificate-icon {
+    width: 80px;
+    height:  80px;
+  }
+
+  .uniCrest {
+    width: 250px;
+    height:  250px;
+  }
+
+  .noCertificate {
+    width:  800px;
+    height:  800px;
+  }
+
+  .certificate-dropDown {
+    height: 30px;
+  }
+
+  .certificate-dropDown input {
+    margin-top: 12px;
+  }
+
+  .share-txt p {
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+
+  .rectangleMaterial a {
+    font-size: 15px;
+  }
+
+  .alert {
+    font-size: 18px;
+  }
+
+  .launchImg {
+    width: 600px;
+    height:  600px;
+  }
+
+   .launchImg2 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .departmentCol {
+    margin-right: 50px;
+  }
+
+  .departmentTile {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .addDepartmentImg {
+    top:  30px;
+    left: 30px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+
+  .addModuleImg {
+    transform: translateX(-30px);
+    height: 480%;
+  }
+
+  .moduleText {
+    padding-top: 0px;
+  }
+
+  .moduleTextH1 {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  .moduleTextH2 {
+    font-size: 20px;
+    /*margin-top: 5px;*/
+  }
+
+  .addDepartmentText {
+    align-items: center;
+    transform: translateY(-50%);
+    margin-top: 150px;
+  }
+
+  .addDepartmentText h2 {
+    font-size: 30px;
+  }
+
+  .departmentTitle h1 {
+    font-size: 50px;
+  }
+
+  .departmentTitle h4 {
+    font-size: 40px;
+  }
+
+  .departmentTitle2 h4 {
+    font-size: 40px;
+  }
+
+  .sharedDegreeTitle h4 {
+    font-size: 40px;
+  }
+
+  .yearTitle button {
+    font-size: 40px;
+  }
+
+  .markAvg {
+    font-size: 20px;
+  }
+
+  .degreeTitle h4 {
+    font-size: 40px;
+  }
+
+  .profileCol h4 {
+    font-size: 40px;
+  }
+
+  #department_form{
+      width: 840px;
+      /*height: 840px;*/
+  }
+
+  .noCertificateText h1 {
+    font-size: 50px;
+  }
+
+  .content-section h3 {
+    font-size: 13px;
+  }
+
+  .module-close h2 {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+  .tableHeader {
+    font-size: 180%;
+    line-height: 110%;
+  }
+
+  .tableContent {
+    font-size: 140%;
+  }
+
+  .profile {
+    width: 300px;
+    margin-top: 65px;
+  }
+
+  .profileCol {
+    width: 350px;
+  }
+
+  .profilePic {
+    width: 100px;
+    height:  100px;
+  }
+
+  .profile h2 {
+    font-size: 18px;
+  }
+
+  .profile h3 {
+  font-size: 12px;
+}
+
+}
+
+
+@media screen and (min-height:  780px) {
+  .launchImgPadding {
+    padding-top: 25px;
+  }
+}
+
+@media screen and (min-height:  1500px) {
+  .launchImgPadding {
+    padding-top: 250px;
+  }
+}
+
+
+

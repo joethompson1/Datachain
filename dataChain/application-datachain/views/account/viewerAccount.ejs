@@ -1,0 +1,185 @@
+
+
+
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/account-styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid body-position">
+
+		<div class="row">
+			<div class="container-fluid" id="welcome">
+				<div class="container">
+					<div class="row launchImgPadding" style="">
+						<img class="launchImg center" src="../images/Undraw/undraw_outer_space_re_u9vd.svg">
+					</div>
+					<div class="row typewriter center" style="width: max-content;">
+						<h1 style="margin-top: 2vh;">Launching Shared Degrees...</h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-9">
+
+				<div class="container-fluid text-center sharedDegreeTitle">
+					<h4>Shared Degrees.</h4>
+					<section class="ftco-section">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="">
+										<table class="table myaccordion table-hover" id="accordion" style="margin-top: 40px;">
+										  <thead>
+										    <tr class="tableHeader">
+										      <th style="padding: 20px;">#</th>
+										      <th style="padding: 20px;">Student</th>
+										      <th style="padding: 20px;">University</th>
+										      <th style="padding: 20px;">Degree Title</th>
+										      <th style="padding: 20px;">Degree Type</th>
+										      <th style="padding: 20px;">Grade</th>
+										      <th style="padding: 20px;">Date</th>
+										      <th style="padding: 20px;">&nbsp;</th>
+										    </tr>
+										  </thead>
+
+										  <tbody>
+
+											  <% certificateArray.forEach(function(certificate, i) { %>
+
+											    <tr data-toggle="collapse" data-target="#collapse<%= i %>" aria-expanded="true" aria-controls="collapse<%= i %>" class="tableContent" style="width: 10000px;">
+											      <th scope="row" style="padding: 15px;"><%= i+1 %></th>
+											      <td style="padding: 15px;"><%= certificateArray[i].student.name %></td>
+											      <td style="padding: 15px;"><%= certificateArray[i].accreditor.name %></td>
+											      <td style="padding: 15px;"><%= certificateArray[i].subject %></td>
+											      <td style="padding: 15px;"><%= certificateArray[i].degreeType %></td>
+											      <td style="padding: 15px;"><%= certificateArray[i].classification %></td>
+											      <td style="padding: 15px;"><%= certificateArray[i].Date %></td>
+									        	  <td style="padding: 15px;"></td>
+											    </tr>
+											    <tr>
+											    	<td colspan="8" id="collapse<%= i %>" class="collapse acc" data-parent="#accordion">
+											    		<div class="container-fluid content-section" style="margin-bottom: 30px;">
+															<div class="row">
+																<div class="col">
+																	<fieldset class="form-group">
+																		<div class="row">
+																			<img class="certificate-icon" src="../images/certificate.png" alt="">
+																			<div class="col border-bottom mb-5">
+																				<h1 style="transform: translateX(-25%);">Awarded Degree</h1>
+																			</div>
+																			<div class="col border-bottom mb-5">
+																				<h2 class="certificate-date"><%= certificateArray[i].Date %></h2>
+																			</div>
+																		</div>
+
+																		<div class="row">
+																			<div class="col"></div>
+																			<div class="col" style="transform: translateX(-12%);"><img class="uniCrest" src="../images/manchesterUniCrest.png" alt=""></div>
+																			<div class="col"></div>
+																			
+																		</div>
+
+																		<div class="row">
+																			<div class="col"></div>
+																			<h1 class="certificate-accreditor"><%= certificateArray[i].accreditor.name %></h1>
+																			<div class="col"></div>
+																		</div>
+
+																		<div class="row">
+																			<div class="col"></div>
+																			<div class="col text-align">
+																				<div class="form-group">
+																					<h2><u>Degree Type:</u></h2>
+																					<p><%= certificateArray[i].degreeType %></p>
+																				</div>
+
+																				<div class="form-group">
+																					<h2><u>Subject: </u></h2>
+																					<p><%= certificateArray[i].subject %></p>
+																				</div>
+
+																				<div class="form-group">
+																					<h2><u>Classification: </u></h2>
+																					<p><%= certificateArray[i].classification %></p>
+																				</div>	
+																			</div>
+																			<div class="col"></div>
+																		</div>
+
+																		<div class="row" style="transform: translateY(20px);">
+																			<div class="col" style="text-align: left;">
+																				<h3><%= certificateArray[i].accreditor.name %> Wallet: <%= certificateArray[i].accreditor._id.toString() %><h3>		
+																			</div>
+																			<div class="col" style="text-align: right;">
+																				<h3><%= certificateArray[i].student.name %> wallet: <%= certificateArray[i].student._id.toString() %></h3>
+																			</div>
+																		</div>
+
+																	</fieldset>
+																</div>
+															</div>
+														</div>
+											    	</td>
+											    </tr>
+
+											  <% }); %>
+										  
+										  </tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+
+				<% if (certificateArray.length == 0) { %> 
+					<div class="container-fluid noSharedDegree" style="transform: translateY(-48px);">
+						<div class="container-fluid content-section">
+							<div class="container">
+								<div class="row" style="">
+									<img class="launchImg center" src="../images/Undraw/undraw_waiting__for_you_ldha.svg">
+								</div>
+								<div class="row noCertificateText center" style="width: max-content;">
+									<h1 style="margin-top: 2vh;">No shared degrees found.</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				<% } %>
+
+			</div>
+			<div class="col-3">
+				<div class="container profileCol">
+					<h4>Profile.</h4>
+				</div>
+				<div class="container profile text-align">
+					<img class="profilePic" style="color: white;" src="../images/userWhite.svg" alt="">
+					<h2 style="padding-top: 15px; color: white;"><%= viewerName %></h2>
+					<h3 style="padding-top: 10px; color: white"><%= viewerEmail %></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="page-footer font-small blue" style="margin-top: 1050px;">
+
+	  <div class="footer-copyright text-center py-3">© 2022 Copyright:
+	    <a href=""> Data-chain.org</a>
+	  </div>
+
+	</footer>
+
+
+
+	<script src="/javascript/jquery.min.js"></script>
+  	<script src="/javascript/bootstrap.min.js"></script>
+  	<script src="/javascript/viewerAccount.js"></script>
+
+
+</body>
+

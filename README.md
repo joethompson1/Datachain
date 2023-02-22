@@ -16,9 +16,9 @@
     My university dissertation project that utilises the Hyperledger Fabric blockchain to allow for the awarding and storing of digital degrees.
     <br />
     <br />
+    <a href="https://drive.google.com/file/d/1ZvBKH6Ezdz7gkq5NJTThPwjUGQTCqliJ/view"><strong><<  Read Project Report >></strong></a>
     <a href="https://joethompson.co.uk/projects"><strong><< View Portfolio Overview  >></strong></a>
     <br />
-    <a href="https://drive.google.com/file/d/1ZvBKH6Ezdz7gkq5NJTThPwjUGQTCqliJ/view"><strong><<  Read Project Report >></strong></a>
     <br />
     <br />
   </p>

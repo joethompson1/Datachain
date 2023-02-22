@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="">
-    <img src="dataChain/application-datachain/public/images/DataChain v1 (Colour-light-blue).svg" alt="Logo" width="80" height="80">
+    <img src="dataChain/application-datachain/public/images/DataChain v1 (Colour-light-blue).svg" alt="Logo" width="180" height="180">
   </a>
 
   <h3 align="center">Joe Thompson</h3>

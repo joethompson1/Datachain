@@ -53,7 +53,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]()
+[![homePage][product-screenshot]]()
+[![homePage][product-screenshot2]]()
 
 After years of building projects with friends and on my own I thought it was a good time to start collating them
 into one website where my work can be easily found, viewed and potentially shared.
@@ -154,6 +155,7 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: dataChain/application-datachain/public/images/homePage.png
+[product-screenshot2]: dataChain/application-datachain/public/images/studentAccountPageWithDegree.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

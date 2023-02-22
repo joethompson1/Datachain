@@ -83,6 +83,7 @@ The technologies I used to build this project are listed below:
 * [![Hyperledger Fabric][Hyperledger]][Hyperledger-url]
 * [![Node.JS][NodeJS]][NodeJS-url]
 * [![MongoDB][MongoDB]][MongoDB-url]
+* [![NPM][NPM]][NPM-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -169,6 +170,8 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 [NodeJS-url]: https://nodejs.org/en/
 [MongoDB]: https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=MongoDB&logoColor=white
 [MongoDB-url]: https://www.mongodb.com/
+[NPM]: https://img.shields.io/badge/NPM-d90166?style=for-the-badge&logo=npm&logoColor=black
+[NPM-url]: https://www.npmjs.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D

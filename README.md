@@ -10,13 +10,13 @@
     <img src="dataChain/application-datachain/public/images/DataChain v1 (Colour-light-blue).svg" alt="Logo" width="180" height="180">
   </a>
 
-  <h3 align="center">Joe Thompson</h3>
+  <h3 align="center">Datachain</h3>
 
   <p align="center">
-    A portfolio website created by, and showcasing the work of Joe Thompson.
+    My dissertation project that utilises Hyperledger Fabric blockchain to allow for the awarding and storing of digital degrees.
     <br />
     <br />
-    <a href="https://joethompson.co.uk"><strong>View Portfolio Website »</strong></a>
+    <a href="https://joethompson.co.uk/projects"><strong>View Portfolio Overview »</strong></a>
     <br />
     <br />
   </p>

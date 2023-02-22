@@ -164,7 +164,7 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 [Next-url]: https://nextjs.org/
 [Hyperledger]: https://img.shields.io/badge/Hyperledger_Fabric-FF0000?style=for-the-badge&logo=Hyperledger&logoColor=white
 [Hyperledger-url]: https://www.hyperledger.org/use/fabric/
-[NodeJS]: https://img.shields.io/badge/Node.JS-00FF00?style=for-the-badge&logo=Node.js&logoColor=white
+[NodeJS]: https://img.shields.io/badge/Node.JS-BAB86C?style=for-the-badge&logo=Node.js&logoColor=white
 [NodeJS-url]: https://nodejs.org/en/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/

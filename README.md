@@ -59,8 +59,15 @@
 ### Student Account Page:
 [![homePage][product-screenshot2]]()
 
-After years of building projects with friends and on my own I thought it was a good time to start collating them
-into one website where my work can be easily found, viewed and potentially shared.
+
+### Description:
+The purpose of the application was to create a prototype which highlights to universities that the adoption of blockchain technology is not only beneficial to their organisation, but also to their past, present, and future students. This is because creating a digital degree brings with it added utility to both students and employers, whilst at the same time helping to prevent qualification fraud.
+
+Datachain makes use of a variety of languages and technologies in order to achieve this. By leveraging the HyperLedger Fabric permissioned blockchain network to deploy custom smart contracts written using the programming language Go, an immutable record of transactions was able to be created, specifically for the distribution and viewing of digital degrees.
+
+This was created with the help of Node.Js and the HyperLedger Fabric blockchain network. Please be aware that a local Hyperledger Fabric blockchain network is required to be running on your computer in order for the site to work as it has not been set up for production purposes.
+
+
 
 Whats included in my portfolio website?
 * Projects page with a link to a detailed overview of each project along with images.

@@ -82,6 +82,7 @@ The technologies I used to build this project are listed below:
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Hyperledger Fabric][Hyperledger]][Hyperledger-url]
 * [![Node.JS][NodeJS]][NodeJS-url]
+* [![MongoDB][MongoDB]][MongoDB-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -162,10 +163,12 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 [product-screenshot2]: dataChain/application-datachain/public/images/studentAccountPageWithDegree.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
-[Hyperledger]: https://img.shields.io/badge/Hyperledger_Fabric-FF0000?style=for-the-badge&logo=Hyperledger&logoColor=white
+[Hyperledger]: https://img.shields.io/badge/Hyperledger_Fabric-FF0000?style=for-the-badge&logo=Hyperledger&logoColor=black
 [Hyperledger-url]: https://www.hyperledger.org/use/fabric/
 [NodeJS]: https://img.shields.io/badge/Node.JS-BAB86C?style=for-the-badge&logo=Node.js&logoColor=white
 [NodeJS-url]: https://nodejs.org/en/
+[MongoDB]: https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=MongoDB&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D

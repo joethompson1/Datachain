@@ -160,7 +160,7 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 [product-screenshot2]: dataChain/application-datachain/public/images/studentAccountPageWithDegree.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
-[Hyperledger]: https://img.shields.io/badge/Hyperledger_Fabric-FFFFFF?style=for-the-badge&logo=Hyperledger&logoColor=black
+[Hyperledger]: https://img.shields.io/badge/Hyperledger_Fabric-FF0000?style=for-the-badge&logo=Hyperledger&logoColor=black
 [Hyperledger-url]: https://www.hyperledger.org/use/fabric/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/

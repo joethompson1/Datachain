@@ -65,18 +65,9 @@ The purpose of the application was to create a prototype which highlights to uni
 
 Datachain makes use of a variety of languages and technologies in order to achieve this. By leveraging the HyperLedger Fabric permissioned blockchain network to deploy custom smart contracts written using the programming language Go, an immutable record of transactions was able to be created, specifically for the distribution and viewing of digital degrees.
 
-This was created with the help of Node.Js and the HyperLedger Fabric blockchain network. Please be aware that a local Hyperledger Fabric blockchain network is required to be running on your computer in order for the site to work as it has not been set up for production purposes.
+This was created with the help of Node.Js and the HyperLedger Fabric blockchain network. Please be aware that a local Hyperledger Fabric blockchain network is required to be running on your computer in order for the site to work as it has not been set up for production purposes. More can be found about this in the getting started.
 
 
-
-Whats included in my portfolio website?
-* Projects page with a link to a detailed overview of each project along with images.
-* Experience page with an overview into who I've worked for, hackathons I've attended and languages I am familiar with. 
-* Contacts page so if anyone wanted to reach out to me they can.
-
-
-As I continue my computer science journey I will continously add to my portfolio in order for it to stay up to date.
-Anyone wishing to clone and use the project may do so at their own discretion, all I ask is for you to acknowledge the project in the ReadMe.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

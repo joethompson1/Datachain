@@ -14,6 +14,7 @@ const { fabric_initial_connection } = require('./controllers/hyperledgerControll
 
 
 const dbURI = 'mongodb+srv://joethompson:Thojoe12@cluster0.sw8hl.mongodb.net/datachain';
+// dbURI = process.env.mongoDBURI;
 mongoose.connect(dbURI, { useUnifiedTopology: true })
 	.then((result) => app.listen(process.env.PORT || 3000))
 	.catch((err) => console.log(err));

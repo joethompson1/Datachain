@@ -97,6 +97,11 @@ If you wish to set up the project locally then follow these simple steps below.
 
 ### Prerequisites
 
+* Clone the repo
+   ```sh
+   git clone https://github.com/joethompson1/joethompson.git
+   ```
+
 If npm is already installed on your machine then you can skip this step.
 If you don't have npm installed then copy and past the line below into terminal.
 
@@ -105,18 +110,23 @@ If you don't have npm installed then copy and past the line below into terminal.
   npm install -g npm
   ```
 
-### Installation Front End
 
-Follow the steps below to set up and start the project locally:
+If docker is already installed on your machine then you can skip this step.
+If you don't have docker installed then copy and past the line below into terminal.
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/joethompson1/joethompson.git
-   ```
-3. Go into dataChain/application-datachain/
-   ```sh
-   dataChain/application-datachain/
-   ```
+* docker: download and follow the guide on their website
+  ```url
+  https://docs.docker.com/desktop/install/mac-install/
+  ```
+
+
+
+
+### Installation and Set Up of Hyperledger Fabric Blockchain
+
+Follow the steps below to set up and start the Hyperledger Fabric blockchain network locally:
+
+
 3. Install NPM packages
    ```sh
    npm install
@@ -131,23 +141,25 @@ Follow the steps below to set up and start the project locally:
    ```
 
 
-### Installation Back End
 
-Follow the steps below to set up and start the Hyperledger Fabric blockchain network locally:
+### Installation and Set Up of Front End
 
-1. Clone the repo
+Follow the steps below to set up and start the project locally:
+
+
+1. Go into dataChain/application-datachain/
    ```sh
-   git clone https://github.com/joethompson1/joethompson.git
+   cd dataChain/application-datachain/
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Start the React development server
+3. Start the development server
    ```sh
-   npm start
+   npm run devStart
    ```
-5. Open the website locally in your browser
+4. Open the website locally in your browser
    ```
    http://localhost:3000/
    ```

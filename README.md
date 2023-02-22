@@ -153,7 +153,7 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: "dataChain/application-datachain/public/images/homePage.png
+[product-screenshot]: dataChain/application-datachain/public/images/homePage.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

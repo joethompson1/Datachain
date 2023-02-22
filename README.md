@@ -76,10 +76,11 @@ This was created with the help of Node.Js and the HyperLedger Fabric blockchain 
 
 ### Built With
 
-The technologies I used to built my portfolio are listed below:
+The technologies I used to build this project are listed below:
 
-* [![React][React.js]][React-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Hyperledger Fabric][Hyperledger]][Hyperledger-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,6 +160,8 @@ Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
 [product-screenshot2]: dataChain/application-datachain/public/images/studentAccountPageWithDegree.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+[Hyperledger]: https://img.shields.io/badge/Hyperledger_Fabric-FFFFFF?style=for-the-badge&logo=Hyperledger&logoColor=black
+[Hyperledger-url]: https://www.hyperledger.org/use/fabric/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D

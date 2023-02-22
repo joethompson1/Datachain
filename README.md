@@ -17,7 +17,7 @@
     <br />
     <br />
     <a href="https://joethompson.co.uk/projects"><strong>View Portfolio Overview  | </strong></a>
-    <a href="https://drive.google.com/file/d/1ZvBKH6Ezdz7gkq5NJTThPwjUGQTCqliJ/view"><strong> Read Project Report »</strong></a>
+    <a href="https://drive.google.com/file/d/1ZvBKH6Ezdz7gkq5NJTThPwjUGQTCqliJ/view"><strong>|  Read Project Report »</strong></a>
     <br />
     <br />
   </p>

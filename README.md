@@ -97,24 +97,27 @@ If you wish to set up the project locally then follow these simple steps below.
 
 ### Prerequisites
 
-* Clone the repo
+
+#### Clone the repo
+* Clone the datachain repository
    ```sh
    git clone https://github.com/joethompson1/joethompson.git
    ```
 
+#### NPM
 If npm is already installed on your machine then you can skip this step.
 If you don't have npm installed then copy and past the line below into terminal.
 
-* npm
+* Install npm
   ```sh
   npm install -g npm
   ```
 
-
+#### Docker
 If docker is already installed on your machine then you can skip this step.
 If you don't have docker installed then copy and past the line below into terminal.
 
-* docker: download and follow the guide on their website
+* download and follow the guide on their website
   ```url
   https://docs.docker.com/desktop/install/mac-install/
   ```

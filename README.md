@@ -53,7 +53,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+# Home Page:
 [![homePage][product-screenshot]]()
+
+# Student Account Page:
 [![homePage][product-screenshot2]]()
 
 After years of building projects with friends and on my own I thought it was a good time to start collating them

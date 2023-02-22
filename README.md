@@ -105,9 +105,35 @@ If you don't have npm installed then copy and past the line below into terminal.
   npm install -g npm
   ```
 
-### Installation
+### Installation Front End
 
 Follow the steps below to set up and start the project locally:
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/joethompson1/joethompson.git
+   ```
+3. Go into dataChain/application-datachain/
+   ```sh
+   dataChain/application-datachain/
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Start the React development server
+   ```sh
+   npm start
+   ```
+5. Open the website locally in your browser
+   ```
+   http://localhost:3000/
+   ```
+
+
+### Installation Back End
+
+Follow the steps below to set up and start the Hyperledger Fabric blockchain network locally:
 
 1. Clone the repo
    ```sh
@@ -125,6 +151,9 @@ Follow the steps below to set up and start the project locally:
    ```
    http://localhost:3000/
    ```
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

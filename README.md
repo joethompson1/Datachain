@@ -13,10 +13,11 @@
   <h3 align="center">Datachain</h3>
 
   <p align="center">
-    My dissertation project that utilises Hyperledger Fabric blockchain to allow for the awarding and storing of digital degrees.
+    My university dissertation project that utilises the Hyperledger Fabric blockchain to allow for the awarding and storing of digital degrees.
     <br />
     <br />
     <a href="https://joethompson.co.uk/projects"><strong>View Portfolio Overview »</strong></a>
+    <a href="https://drive.google.com/file/d/1ZvBKH6Ezdz7gkq5NJTThPwjUGQTCqliJ/view"><strong>Read Project Report »</strong></a>
     <br />
     <br />
   </p>
@@ -51,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://joethompson.co.uk)
+[![Product Name Screen Shot][product-screenshot]]()
 
 After years of building projects with friends and on my own I thought it was a good time to start collating them
 into one website where my work can be easily found, viewed and potentially shared.

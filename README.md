@@ -122,7 +122,7 @@ If you don't have docker installed then copy and past the line below into termin
   https://docs.docker.com/desktop/install/mac-install/
   ```
 
-
+<br></br>
 
 
 ### Installation and Set Up of Hyperledger Fabric Blockchain

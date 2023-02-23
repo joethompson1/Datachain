@@ -103,7 +103,7 @@ If you don't have them installed then copy and paste the necessary lines below i
 #### Clone the repo
 * Clone the datachain repository
    ```sh
-   git clone https://github.com/joethompson1/joethompson.git
+   git clone https://github.com/joethompson1/Datachain.git
    ```
 
 #### NPM

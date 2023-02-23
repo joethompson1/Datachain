@@ -11,10 +11,10 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const { requireAuth, checkUser, checkAccreditor, checkViewer, checkDepartment } = require('./middleware/authMiddleware');
 const { fabric_initial_connection } = require('./controllers/hyperledgerController');
+const { mongoDBURI } = require('./config.js');
 
 
-const dbURI = 'mongodb+srv://joethompson:Thojoe12@cluster0.sw8hl.mongodb.net/datachain';
-// dbURI = process.env.mongoDBURI;
+const dbURI = mongoDBURI;
 mongoose.connect(dbURI, { useUnifiedTopology: true })
 	.then((result) => app.listen(process.env.PORT || 3000))
 	.catch((err) => console.log(err));

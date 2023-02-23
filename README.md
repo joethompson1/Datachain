@@ -96,6 +96,8 @@ The technologies I used to build this project are listed below:
 If you wish to set up the project locally then follow these simple steps below.
 
 ### Prerequisites
+If the following are already installed on your machine then you can skip this step.
+If you don't have them installed then copy and paste the necessary lines below into the terminal.
 
 
 #### Clone the repo
@@ -105,18 +107,27 @@ If you wish to set up the project locally then follow these simple steps below.
    ```
 
 #### NPM
-If npm is already installed on your machine then you can skip this step.
-If you don't have npm installed then copy and past the line below into terminal.
-
 * Install npm
   ```sh
   npm install -g npm
   ```
 
-#### Docker
-If docker is already installed on your machine then you can skip this step.
-If you don't have docker installed then copy and past the line below into terminal.
 
+#### Homebrew
+* Install homebrew
+  ```sh
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  ```
+
+
+#### Go
+* Install go
+  ```sh
+  brew install go@1.18
+  ```
+
+
+#### Docker
 * download and follow the guide on their website
   ```url
   https://docs.docker.com/desktop/install/mac-install/
@@ -130,13 +141,11 @@ If you don't have docker installed then copy and past the line below into termin
 Follow the steps below to set up and start the Hyperledger Fabric blockchain network locally:
 
 
-3. Install NPM packages
+3. Start docker
+
+4. Go into test-network/
    ```sh
-   npm install
-   ```
-4. Start the React development server
-   ```sh
-   npm start
+   cd test-network/
    ```
 5. Open the website locally in your browser
    ```
@@ -158,15 +167,18 @@ Follow the steps below to set up and start the project locally:
    ```sh
    npm install
    ```
-3. Start the development server
+3. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+4. Start the development server
    ```sh
    npm run devStart
    ```
-4. Open the website locally in your browser
+5. Open the website locally in your browser
    ```
    http://localhost:3000/
    ```
-
 
 
 

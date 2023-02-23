@@ -123,15 +123,42 @@ If you don't have them installed then copy and paste the necessary lines below i
 #### Go
 * Install go
   ```sh
-  brew install go@1.18
+  brew install go
   ```
+
+
+#### cURL
+* Install the latest version of cURL if it is not already installed.
+  ```sh
+  brew install curl
+  ```
+
 
 
 #### Docker
-* download and follow the guide on their website
-  ```url
-  https://docs.docker.com/desktop/install/mac-install/
+* Install the latest version of Docker Desktop if it is not already installed. Since Docker Desktop is a UI application on Mac, use cask to install it.
+  ```sh
+  brew install --cask --appdir="/Applications" docker
   ```
+Docker Desktop must be launched to complete the installation so be sure to open the application after installing it:
+  ```sh
+  open /Applications/Docker.app
+  ```
+
+#### Download Fabric samples, Docker images, and binaries
+* Create a new folder seperate to the project and cd into it
+  ```sh
+  cd newFolder/
+  ```
+* Download the install script into the new folder you created
+  ```sh
+  curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh
+  ```
+* Install fabric
+  ```sh
+  ./install-fabric.sh
+  ```
+
 
 <br></br>
 
@@ -141,7 +168,26 @@ If you don't have them installed then copy and paste the necessary lines below i
 Follow the steps below to set up and start the Hyperledger Fabric blockchain network locally:
 
 
-3. Start docker
+1. Start docker
+2. Copy the following folders:
+   ```sh
+   bin
+   ```
+   ```sh
+   ci
+   ```
+   ```sh
+   config
+   ```
+   ```sh
+   test-network
+   ```
+   ```sh
+   scripts
+   ```
+   ```sh
+   test-application
+   ```
 
 4. Go into test-network/
    ```sh

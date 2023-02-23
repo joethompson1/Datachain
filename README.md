@@ -210,7 +210,7 @@ Follow the steps below to set up and start the Hyperledger Fabric blockchain net
    ``` sh
    ./network.sh deployCC -ccn basic -ccp ../dataChain/chaincode-go/chaincode/ -ccl go
    ```
-
+<br></br>
 
 
 ### Installation and Set Up of Front End
@@ -228,9 +228,9 @@ Follow the steps below to set up and start the project locally:
    ```
 3. Enter your MongoDB API key in `config.js`
    ```js
-   const dbURI = 'ENTER YOUR API';
+   const mongoDBURI = 'ENTER YOUR API';
    // Should look something like below
-   const dbURI = 'mongodb+srv://joethompson:<PASSWORD>@<cluster>/<name of db: datachain>';
+   const mongoDBURI = 'mongodb+srv://joethompson:<PASSWORD>@<cluster>/<>';
    ```
 4. Start the development server
    ```sh
@@ -266,9 +266,7 @@ Joe Thompson
 
 Email: joe.cl.thompson@gmail.com
 
-Github Link: [https://github.com/joethompson1/joethompson](https://github.com/joethompson1/joethompson)
-
-Project Link: [https://joethompson.co.uk](https://joethompson.co.uk)
+Github Link: [https://github.com/joethompson1/Datachain](https://github.com/joethompson1/Datachain)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

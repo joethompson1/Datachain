@@ -140,7 +140,7 @@ If you don't have them installed then copy and paste the necessary lines below i
   ```sh
   brew install --cask --appdir="/Applications" docker
   ```
-Docker Desktop must be launched to complete the installation so be sure to open the application after installing it:
+* Docker Desktop must be launched to complete the installation so be sure to open the application after installing it:
   ```sh
   open /Applications/Docker.app
   ```
@@ -227,17 +227,19 @@ Follow the steps below to set up and start the project locally:
    ```sh
    npm install
    ```
-3. Enter your MongoDB API key in `config.js`
+3. Create new file called `config.js`
+
+4. Enter your MongoDB API key in `config.js` remember to include `/datachain?retryWrites=true&w=majority` at the end of the URI
    ```js
    const mongoDBURI = 'ENTER YOUR API';
    // Should look something like below
-   const mongoDBURI = 'mongodb+srv://joethompson:<PASSWORD>@<cluster>/<>';
+   const mongoDBURI = 'mongodb+srv://<ACCOUNT NAME>:<PASSWORD>@<cluster>/datachain?retryWrites=true&w=majority';
    ```
-4. Start the development server
+5. Start the development server
    ```sh
    npm run devStart
    ```
-5. Open the website locally in your browser
+6. Open the website locally in your browser
    ```
    http://localhost:3000/
    ```

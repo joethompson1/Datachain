@@ -145,8 +145,16 @@ Docker Desktop must be launched to complete the installation so be sure to open 
   open /Applications/Docker.app
   ```
 
+
+#### JQ
+* Install the latest version of jq if it is not already installed.
+  ```sh
+  brew install jq
+  ```
+
+
 #### Download Fabric samples, Docker images, and binaries
-* Create a new folder seperate to the project and cd into it
+* Create a new folder named fabricSamples, seperate to the project and cd into it
   ```sh
   cd newFolder/
   ```
@@ -169,7 +177,7 @@ Follow the steps below to set up and start the Hyperledger Fabric blockchain net
 
 
 1. Start docker
-2. Copy the following folders:
+2. Copy the following folders from fabricSamples:
    ```sh
    bin
    ```
@@ -188,14 +196,19 @@ Follow the steps below to set up and start the Hyperledger Fabric blockchain net
    ```sh
    test-application
    ```
+   and paste them into the project root (replacing the folders already there).
 
 4. Go into test-network/
    ```sh
    cd test-network/
    ```
-5. Open the website locally in your browser
+5. Bring up the Hyperledger network and create a channel called mychannel
+   ``` sh
+   ./network.sh up createChannel -c mychannel -ca
    ```
-   http://localhost:3000/
+6. Deploy the chaincode/smart contract to the newly created channel
+   ``` sh
+   ./network.sh deployCC -ccn basic -ccp ../dataChain/chaincode-go/chaincode/ -ccl go
    ```
 
 
@@ -213,9 +226,11 @@ Follow the steps below to set up and start the project locally:
    ```sh
    npm install
    ```
-3. Enter your API in `config.js`
+3. Enter your MongoDB API key in `config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const dbURI = 'ENTER YOUR API';
+   // Should look something like below
+   const dbURI = 'mongodb+srv://joethompson:<PASSWORD>@<cluster>/<name of db: datachain>';
    ```
 4. Start the development server
    ```sh

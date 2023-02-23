@@ -156,9 +156,10 @@ Docker Desktop must be launched to complete the installation so be sure to open 
 #### Download Fabric samples, Docker images, and binaries
 * Create a new folder named fabricSamples, seperate to the project and cd into it
   ```sh
-  cd newFolder/
+  mkdir fabricSamples
+  cd fabricSamples/
   ```
-* Download the install script into the new folder you created
+* Download the fabric install script into the new folder you created
   ```sh
   curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh
   ```

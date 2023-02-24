@@ -253,15 +253,6 @@ Follow the steps below to set up and start the project locally:
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
